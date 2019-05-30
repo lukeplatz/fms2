@@ -1,0 +1,12 @@
+---
+applications:
+- name: fms2
+  memory: 1024M
+  host: fms2_10
+  domain: mybluemix.net
+  buildpack: java_buildpack
+  path: target/fms2-0.1-SNAPSHOT.jar
+  env:
+   PROFILE: bluemix
+   CONFIG_SERVER_URI: ${configServerUri}
+  timeout: 360
